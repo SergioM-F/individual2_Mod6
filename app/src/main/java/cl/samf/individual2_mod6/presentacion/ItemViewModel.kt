@@ -21,7 +21,7 @@ class ItemViewModel (aplicacion : Application): AndroidViewModel(aplicacion) {
 
     }
 
-    fun insertarTareas(nombre:String, precio: Int, cantidad: Int)=viewModelScope.launch{
+    fun insertarTareas(nombre: String, precio: Int, cantidad: Int )=viewModelScope.launch{
         val item = Item(nombre,precio,cantidad)
         repositorio.insertItem(item)
     }
