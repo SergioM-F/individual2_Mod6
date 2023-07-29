@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.Fragment_agregar">
+    tools:context=".presentacion.AgregarFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -17,106 +17,117 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/nombre_de_item"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNombre"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/editTextNombre" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="@string/precio_unidad"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPrecio"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/editTextPrecio" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:text="@string/cantidad"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCantidad"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/editTextCantidad" />
 
     <EditText
         android:id="@+id/editTextNombre"
         android:layout_width="265dp"
         android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/chela"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:ignore="MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteY="7dp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,VisualLintBounds" />
 
     <EditText
         android:id="@+id/editTextPrecio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/_000"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck,VisualLintTextFieldSize"
-        tools:layout_editor_absoluteY="87dp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre"
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/editTextCantidad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/_0000"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        tools:layout_editor_absoluteY="168dp"
-        tools:ignore="MissingConstraints,VisualLintTextFieldSize"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrecio"
+        tools:ignore="MissingConstraints,VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="44dp"
         android:text="@string/total_actual"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCantidad" />
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="144dp"
         android:layout_height="66dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="216dp"
         android:text="@string/guardar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="36dp"
         android:text="@string/_00000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/btnGuardar"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
