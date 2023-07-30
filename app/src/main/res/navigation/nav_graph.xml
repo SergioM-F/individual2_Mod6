@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/agregarFragment2">
+    app:startDestination="@id/agregarFragment">
 
     <fragment
         android:id="@+id/recyclerFragment"
@@ -11,7 +11,7 @@
         android:label="fragment_recycler"
         tools:layout="@layout/fragment_recycler" />
     <fragment
-        android:id="@+id/agregarFragment2"
+        android:id="@+id/agregarFragment"
         android:name="cl.samf.individual2_mod6.presentacion.AgregarFragment"
         android:label="fragment_agregar"
         tools:layout="@layout/fragment_agregar" />
