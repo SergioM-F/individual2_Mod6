@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">individual2_Mod6</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagen">una imagen</string>
     <string name="name">Name</string>
     <string name="textview">TextView</string>
     <string name="textview2">TextView</string>
@@ -18,4 +18,6 @@
     <string name="total_actual">TOTAL ACTUAL</string>
     <string name="_00000">00000</string>
     <string name="msje">Agregado Correctamente</string>
+    <string name="precio">precio</string>
+    <string name="nombre">nombre</string>
 </resources>
