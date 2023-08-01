@@ -14,7 +14,7 @@
         app:layout_constraintGuide_begin="147dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewTituloNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre_de_item"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextNombre" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewTituloPrecioUni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/precio_unidad"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextPrecio" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewTituloCant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cantidad"
@@ -129,5 +129,16 @@
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="@+id/btnGuardar"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageButton
+        android:id="@+id/imageButtonVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#267391"
+        android:src="@drawable/baseline_list_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

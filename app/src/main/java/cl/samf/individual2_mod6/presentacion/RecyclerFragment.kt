@@ -49,15 +49,6 @@ class RecyclerFragment : Fragment() {
         return binding.root
     }
 
-    private fun initLista() {
-        adapter = AdaptadorItem()
-        itemViewModel.obtenerTareas().observe(viewLifecycleOwner) {
-            adapter.setData(it)
-
-        }
-        binding.recyclerView.adapter = adapter
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -67,4 +58,15 @@ class RecyclerFragment : Fragment() {
 
 
     }
+
+    private fun initLista() {
+        adapter = AdaptadorItem()
+        itemViewModel.obtenerTareas().observe(viewLifecycleOwner) {
+            adapter.setData(it)
+
+        }
+        binding.recyclerView.adapter = adapter
+    }
+
+
 }

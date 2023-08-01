@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import cl.samf.individual2_mod6.R
 import cl.samf.individual2_mod6.data.local.Item
 import cl.samf.individual2_mod6.databinding.FragmentAgregarBinding
@@ -29,6 +30,16 @@ class AgregarFragment : Fragment() {
         initListener()
 
         return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.imageButtonVolver.setOnClickListener {
+            findNavController().navigate(R.id.action_agregarFragment_to_recyclerFragment)
+        }
+
 
     }
 
