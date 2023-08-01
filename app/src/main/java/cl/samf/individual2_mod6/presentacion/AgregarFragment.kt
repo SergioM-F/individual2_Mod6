@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.activityViewModels
 import cl.samf.individual2_mod6.R
 import cl.samf.individual2_mod6.data.local.Item
@@ -23,12 +24,28 @@ class AgregarFragment : Fragment() {
     ): View? {
 
         binding = FragmentAgregarBinding.inflate(layoutInflater,container,false)
-
+        setupEditText()
+        obtenerResultado()
         initListener()
 
         return binding.root
 
     }
+
+
+
+    private fun setupEditText() {
+        binding.editTextCantidad.addTextChangedListener { obtenerResultado() }
+
+        binding.editTextPrecio.addTextChangedListener { obtenerResultado() }
+        }
+    private fun obtenerResultado() {
+        val number1 = binding.editTextCantidad.text.toString().toIntOrNull() ?: 0
+        val number2 = binding.editTextPrecio.text.toString().toIntOrNull() ?: 0
+        val result = number1 * number2
+        binding.txtResultado.text = result.toString()
+    }
+
 
     private fun initListener() {
         binding.btnGuardar.setOnClickListener {
@@ -38,7 +55,6 @@ class AgregarFragment : Fragment() {
 
 
             itemViewModel.insertarTareas(nombre,precio,cantidad)
-            binding.txtResultado.text = (cantidad * precio).toString()
             mensajeAgreagado()
             limpiarPantalla()
 
