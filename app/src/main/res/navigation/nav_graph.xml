@@ -3,16 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/agregarFragment">
+    app:startDestination="@id/recyclerFragment">
 
     <fragment
         android:id="@+id/recyclerFragment"
         android:name="cl.samf.individual2_mod6.presentacion.RecyclerFragment"
         android:label="fragment_recycler"
-        tools:layout="@layout/fragment_recycler" />
+        tools:layout="@layout/fragment_recycler" >
+        <action
+            android:id="@+id/action_recyclerFragment_to_agregarFragment"
+            app:destination="@id/agregarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/agregarFragment"
         android:name="cl.samf.individual2_mod6.presentacion.AgregarFragment"
         android:label="fragment_agregar"
-        tools:layout="@layout/fragment_agregar" />
+        tools:layout="@layout/fragment_agregar" >
+        <action
+            android:id="@+id/action_agregarFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
+    </fragment>
 </navigation>

@@ -36,8 +36,9 @@ class AgregarFragment : Fragment() {
             val precio = binding.editTextPrecio.text.toString().toInt()
             val cantidad = binding.editTextCantidad.text.toString().toInt()
 
-            itemViewModel.insertarTareas(nombre,precio,cantidad)
 
+            itemViewModel.insertarTareas(nombre,precio,cantidad)
+            binding.txtResultado.text = (cantidad * precio).toString()
             mensajeAgreagado()
             limpiarPantalla()
 

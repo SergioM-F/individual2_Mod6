@@ -15,6 +15,12 @@ class AdaptadorItem : RecyclerView.Adapter<AdaptadorItem.ViewHolder>() {
         return ViewHolder(binding)
     }
 
+    fun setData(item: List<Item>){
+        this.itemsList.clear()
+        this.itemsList.addAll(item)
+        notifyDataSetChanged()
+    }
+
     override fun getItemCount(): Int {
         return itemsList.size
     }
@@ -27,8 +33,10 @@ class AdaptadorItem : RecyclerView.Adapter<AdaptadorItem.ViewHolder>() {
     class ViewHolder(val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             binding.textviewItemNombre.text = item.nombre
-            binding.textViewItemCantidad.text = item.cantidad.toString()
-            binding.textViewPrecio.text = item.precio.toString()
+            binding.textViewItemCantidad.text = "Cantidad : " + item.cantidad.toString()
+            binding.textViewPrecio.text = "V unitario : $" + item.precio.toString()
+            binding.textviewTotal.text = "Total $" + (item.precio * item.cantidad).toString()
+
         }
 
     }

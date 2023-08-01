@@ -24,9 +24,9 @@
                 android:id="@+id/textviewItemNombre"
                 android:layout_width="130dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="5dp"
                 android:text="@string/nombre"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextSizeCheck" />
@@ -49,10 +49,22 @@
                 android:id="@+id/textViewPrecio"
                 android:layout_width="130dp"
                 android:layout_height="30dp"
+                android:layout_marginTop="5dp"
                 android:text="@string/precio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewItemCantidad" />
+
+            <TextView
+                android:id="@+id/textviewTotal"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/textview"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/textviewItemNombre"
+                app:layout_constraintVertical_bias="0.137" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
